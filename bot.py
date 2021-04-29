@@ -7,6 +7,7 @@ def lembrar_nome():
     print('Por favor, me recorde seu nome.')
     nome = input()
     print(f'Que nome maravilhoso, {nome}!')
+    return nome
 
 
 def adivinha_idade():
@@ -18,7 +19,7 @@ def adivinha_idade():
     rem7 = int(input())
     idade = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
 
-    print(f'Você tem {idade} anos, acertei?! \n É um bom momento para começar a programar! não acha?')
+    print(f'Você tem {idade} anos, acertei?! \nÉ uma ótima idade para começar a programar! Não acha?')
 
 
 def contagem():
@@ -34,25 +35,27 @@ def contagem():
 
 def teste():
     print('Agora vamos testar seu conhecimento em programação. Pronto?')
-    print('''Por que usarmos métodos?
+    print('''Por que usamos métodos em Python?
           1. Para repetir um teste várias vezes.
           2. Para decompor um programa em várias pequenas subrotinas.
           3. Para determinar o tempo de execução de um programa.
           4. Para interromper a execução de um programa.''')
+
     num = int(input())
     while num != 2:
-        print('Por favor, tente novamente.')
+        num = int(input('Não é isto. Por favor, tente novamente.\n'))
     else:
-        print('Concluído, tenha um ótimo dia!')
+        print('Parabéns você acertou, viu como você já está aprendendo programação!\n')
 
 
-def final():
-    print('Parabéns, você passou nos testes e eu concluí meus procedimentos tenha um ótimo dia! \nDESLIGANDO...')
+def final(nome):
+    print(f'Continue seguindo este caminho {nome}! \n'
+          'Acredito que concluí meus procedimentos por aqui, tenha um ótimo dia! ;D \nDESLIGANDO...')
 
 
-apresentacao('Robotson', '2021')  # change it as you need
-lembrar_nome()
+apresentacao('Robotson', '2021')
+nome = lembrar_nome()
 adivinha_idade()
 contagem()
 teste()
-final()
+final(nome)
