@@ -19,7 +19,6 @@ def adivinha_idade():
     idade = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
 
     print(f'Você tem {idade} anos, acertei?! \n É um bom momento para começar a programar! não acha?')
-    print("Your age is " + str(idade) + "; that's a good time to start programming!")
 
 
 def contagem():
@@ -41,14 +40,14 @@ def teste():
           3. Para determinar o tempo de execução de um programa.
           4. Para interromper a execução de um programa.''')
     num = int(input())
-    if num == 2:
-        print('Concluído, tenha um ótimo dia!')
-    else:
+    while num != 2:
         print('Por favor, tente novamente.')
+    else:
+        print('Concluído, tenha um ótimo dia!')
 
 
 def final():
-    print('Parabéns, tenha um ótimo dia!')
+    print('Parabéns, você passou nos testes e eu concluí meus procedimentos tenha um ótimo dia! \nDESLIGANDO...')
 
 
 apresentacao('Robotson', '2021')  # change it as you need
